@@ -15,6 +15,7 @@ html {
 body {
   background-color: beige;
   font-family: 'Montserrat', sans-serif;
+
   /* background-color: rgba(136, 155, 58, 0.235); */
 }
 
@@ -33,7 +34,7 @@ body {
 
 
 .header-first {
-  font-size: 8vw;
+  font-size: 7vw;
   z-index: 1;
   text-decoration: line-through;
   text-decoration: rgba(218, 165, 32, 0.6) 2px dotted line-through;
@@ -115,6 +116,34 @@ body {
   padding-top: 2vh;
 
 }
+
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: -2vh;
+
+}
+
+.socials a {
+  color: black;
+}
+
+.about div {
+  font-size: 1.75vh;
+  width: 90vw;
+  margin-bottom: 2vh;
+  text-align: justify;
+  line-height: 2vh;
+  font-family: 'Montserrat', sans-serif;
+  word-spacing: 0.7vh;
+}
+
+/* .about span {
+  font-size: 1.5vh;
+  text-align: left;
+} */
 
 .right {
   grid-column: 9/12;
@@ -315,11 +344,11 @@ li {
 
 }
 
-div span {
+/* div span {
   font-size: 3vh;
   text-align: center;
 
-}
+} */
 
 
 .dot-flex {
@@ -402,12 +431,14 @@ li {
 }
 
 .scroller {
-  height: 3vh;
+  display: flex;
+  justify-content: center;
+  height: 3vw;
   line-height: 1.2em;
   position: relative;
   overflow: hidden;
-  width: 55vw;
-  font-size: 3vh;
+  width: 30vw;
+  font-size: 2.5vw;
   text-align: center;
   margin-top: 3vh;
   margin-bottom: 2vh;
@@ -415,24 +446,21 @@ li {
 
 }
 
-.scroller>span {
+.scroller span {
   position: absolute;
   top: 0;
-  left: 50;
   animation: slide 20s infinite;
   font-weight: bold;
   color: goldenrod;
-  text-align: left;
+  text-align: center;
+
 
 
 }
 
 
 
-.static {
-  text-align: right;
-  width: 26vw;
-}
+
 
 .dev {
   text-align: center;
