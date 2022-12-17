@@ -134,7 +134,7 @@ body {
   font-size: 1.75vh;
   width: 90vw;
   margin-bottom: 2vh;
-  text-align: justify;
+  text-align: center;
   line-height: 2vh;
   font-family: 'Montserrat', sans-serif;
   word-spacing: 0.7vh;
@@ -157,6 +157,8 @@ section img {
   width: 25vw;
   height: 25vw;
   ;
+  transition: opacity 0.5s ease-in-out;
+  transition: transform 0.3s ease-in-out;
 
 }
 
@@ -220,9 +222,8 @@ button {
   left: 0;
 }
 
-ul {
+.ul {
   display: flex;
-
   list-style: none;
   align-items: flex-end;
   justify-content: flex-end;
@@ -231,7 +232,13 @@ ul {
   right: 0;
 }
 
-li {
+.ul a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.5vw;
+}
+
+.li {
   /* text-orientation: sideways;
   writing-mode: vertical-lr; */
   font-size: 1.5vh;
@@ -242,6 +249,8 @@ li {
 
 
 }
+
+
 
 /* .slider {
 
@@ -444,6 +453,18 @@ li {
   margin-bottom: 2vh;
   padding: 0;
 
+}
+
+.project {
+  font-size: 4vw;
+  font-weight: 900;
+}
+
+.arduino {
+  width: 15px;
+  height: 15px;
+  background-size: contain;
+  background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn2.iconfinder.com%2Fdata%2Ficons%2Fcomputer-and-hardware-18%2F32%2FArduino_circuit_computer_device_electronics-128.png&f=1&nofb=1&ipt=372849b9cbc8e51d24017b004da1555aa06d5b2e9b72b24e0248c4f46dac2b04&ipo=images")
 }
 
 .scroller span {
