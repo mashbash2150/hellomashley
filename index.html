@@ -8,11 +8,13 @@
   <link rel="stylesheet" type="text/css" href="style.css">
   <title>HelloMashley</title>
   <script src="https://kit.fontawesome.com/d403add618.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="js/lightslider.min.js"></script>
 </head>
 
 <body>
   <!-- <nav> -->
-  <div class="top">
+  <div class="top-nav">
     <div class="socials">
       <a href="https://github.com/mashbash2150/">
         <i class="fa-brands fa-square-github"></i>
@@ -113,7 +115,8 @@
     <div class="about">
       <div>
         Deciding it was time to upskill after over a decade spent in engineering-<em>adjacent</em> roles,
-        I've been busy immersing myself in the world of software development with the goal of breaking in once and for
+        I've been busy immersing myself in the world of software development with my sights set on breaking in once and
+        for
         all.
         I'm proud to have logged over 500 hours of rigorous structured learning as well countelss hours of
         self-guided exploration.
@@ -124,7 +127,7 @@
       <div>Though I have previous expertise in deeply technical realms including robotics, automation, and collaborative
         software
         applications - I've always had a strong passion for design and
-        aesthetics that I've not had
+        aesthetics that I've not yet had
         the privilege of exploring professionally. Through exercising my front-end chops in class, I've found
         deep fulfillment in using my right brain in the development process, which I've drawn from in the making of this
         website and the
@@ -229,17 +232,80 @@
 
       <img class="right" alt='' src="media/flash-code.png">
     </div>
-
-
-
-
-
   </section>
-  <section>
-    <div class="dotted-left section-header">BONUS
+  <section class="section-hobby">
+    <div>
+      <div class="dotted-left section-header">LIFE</div>
+      <div>
+        <div class="motto">I tend to approach life as a banquet, filling my plate and going back for seconds,
+          thirds,fourths.....
+
+
+        </div>
+        <div class="life-images">
+          <ul class="light-slider">
+            <li class="hobby"><img src="media/terrarium.JPG" alt="terrarium" />
+              <div>I love to watch things grow. Terrariums</div>
+            </li>
+            <li class="hobby"><img src="media/olfaction.jpg" alt="Illustration 2" />
+              <div>The world of perfuming satisfies my fascination with all things olfaction.</div>
+            </li>
+
+            <li class="hobby"><img src="media/weld.JPG" alt="terrarium" />
+              <div>Fire and electricity are awesome. Look at those dimes!</div>
+            </li>
+            <li class="hobby"><img src="media/portafilter.png" alt="Portafilter3d" />
+              <div>Sometimes I make things that solve coffee-related problems.</div>
+            </li>
+
+            <li class="hobby"><img src="media/pie.JPG" alt="Pie" />
+              <div>I love to feed people, and experiment in the kitchen.</div>
+            </li>
+            <li class="hobby"><img src="media/yosemite.jpg" alt="Yosemite" />
+              <div> I'm never bored if I'm outside. Yosemite is a favorite.</div>
+            </li>
+            <li class="hobby"><img src="media/adventure.JPG" alt="salt flats" />
+              <div>I'm happy if I'm on an adventure. Or driving fast.</div>
+            </li>
+
+
+            <li class="hobby"><img src="media/douglas.JPG" alt="The Douglas" />
+              <div>Occasionally I pick up a brush. Here is a sign I lettered for a friend's business in LA </div>
+            </li>
+
+            </li>
+            <li class="hobby"><img src="media/lady.jpg" alt="Illustration 2" />
+              <div>I love to draw too. Find me a better pen than the Micron. Go ahead...I'll wait.</div>
+            </li>
+
+          </ul>
+
+
+          </ul>
+        </div>
+      </div>
     </div>
   </section>
 
+
+
+
+
+  <section>
+    <div>
+      <div class="dotted-left section-header">CONTACT</div>
+      <div>Want to Connect? </div>
+      <form>
+      </form>
+    </div>
+
+    </div>
+  </section>
+  <script>
+    $(document).ready(function () {
+      $("#lightSlider").lightSlider({ autoWidth: true });
+    });
+  </script>
 
 </body>
 <footer>
