@@ -13,10 +13,17 @@ html {
 }
 
 body {
+  height: 97%;
+  width: 97%;
+  margin: 1em;
   background-color: beige;
   font-family: 'Montserrat', sans-serif;
 
   /* background-color: rgba(136, 155, 58, 0.235); */
+}
+
+footer {
+  text-align: center;
 }
 
 .header-flex {
@@ -159,6 +166,7 @@ section img {
   ;
   transition: opacity 0.5s ease-in-out;
   transition: transform 0.3s ease-in-out;
+  border-radius: 10px;
 
 }
 
@@ -177,7 +185,8 @@ section img:hover {
   z-index: 5;
   opacity: 1;
   transform: scale(1.4);
-  transform: translateY(-3vh)
+  transform: translateY(-3vh);
+
 }
 
 .socials {
@@ -186,9 +195,25 @@ section img:hover {
   list-style: none;
   align-items: flex-end;
   justify-content: space-evenly;
-  position: absolute;
-  top: 0;
-  left: 0;
+
+}
+
+.footer-socials {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  align-items: flex-end;
+  justify-content: center;
+
+
+}
+
+.footer-socials i {
+  font-size: 3vh;
+  padding: 2vh;
+  color: black;
+
+
 }
 
 .socials i {
@@ -222,31 +247,21 @@ button {
   left: 0;
 }
 
-.ul {
+.nav {
   display: flex;
   list-style: none;
-  align-items: flex-end;
+  align-items: flex-start;
   justify-content: flex-end;
-  position: absolute;
-  top: 0;
-  right: 0;
+
 }
 
-.ul a {
+.nav a {
   text-decoration: none;
   color: black;
-  font-size: 1.5vw;
-}
-
-.li {
-  /* text-orientation: sideways;
-  writing-mode: vertical-lr; */
-  font-size: 1.5vh;
+  font-size: 1.75vw;
+  padding: 0 2vw 0 2vw;
   font-weight: 900;
-
-  letter-spacing: 0.1;
-  margin: 1vh 0 0vh 2vh;
-
+}
 
 }
 
@@ -465,6 +480,12 @@ li {
   height: 15px;
   background-size: contain;
   background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn2.iconfinder.com%2Fdata%2Ficons%2Fcomputer-and-hardware-18%2F32%2FArduino_circuit_computer_device_electronics-128.png&f=1&nofb=1&ipt=372849b9cbc8e51d24017b004da1555aa06d5b2e9b72b24e0248c4f46dac2b04&ipo=images")
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  height: 5vh;
 }
 
 .scroller span {
