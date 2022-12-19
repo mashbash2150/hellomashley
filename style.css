@@ -68,7 +68,7 @@ footer {
 }
 
 .section-header {
-  font-size: 2vh;
+  font-size: 3vh;
 }
 
 .dotted-left {
@@ -79,7 +79,7 @@ footer {
   color: rgba(0, 0, 0, 0.5);
   border-top: 2px dotted rgba(0, 0, 0, 0.366);
   padding: 0.5vw 0 0 1vw;
-  margin-top: 10vw;
+  margin-top: 5vw;
 }
 
 .stack-container {
@@ -102,8 +102,10 @@ footer {
   grid-column: 1/4;
   grid-row: 1;
   text-align: center;
-  font-size: 4vh;
+
   align-items: center;
+  font-size: 2.5vw;
+  font-weight: 900;
 }
 
 .project-info {
@@ -114,6 +116,19 @@ footer {
   grid-row: 1;
   text-align: center;
 
+}
+
+details[open] summary span.exp {
+  transform: rotate(180deg);
+}
+
+summary {
+  display: flex;
+  cursor: pointer;
+}
+
+.exp {
+  padding-left: 2vw;
 }
 
 .left {
@@ -161,8 +176,8 @@ footer {
 
 section img {
   object-fit: cover;
-  width: 25vw;
-  height: 25vw;
+  width: 30vw;
+  height: 30vw;
   ;
   transition: opacity 0.5s ease-in-out;
   transition: transform 0.3s ease-in-out;
@@ -227,6 +242,20 @@ section img:hover {
   padding: 1vh;
 }
 
+.hobby div {
+  z-index: 5;
+  background-color: rgba(218, 165, 32, 1);
+  width: 25vw;
+  position: absolute;
+  bottom: 0;
+  border-radius: 0 0 10px 10px;
+  text-align: center;
+}
+
+.section-hobby {
+  height: 100vh;
+}
+
 button {
   font-family: 'Montserrat', sans-serif;
   padding: 1vh 0 1vh 0;
@@ -262,6 +291,25 @@ button {
   padding: 0 2vw 0 2vw;
   font-weight: 900;
 }
+
+.hobby img {
+  z-index: 1;
+  object-fit: cover;
+  width: 25vw;
+  height: 25vw;
+  ;
+  opacity: 1.0;
+
+  transition: transform 0.3s ease-in-out;
+  border-radius: 10px;
+
+}
+
+hobby div:hover {
+  z-index: 5;
+  opacity: 1;
+  transform: scale(1.4);
+  transform: translateY(-10vh);
 
 }
 
@@ -470,10 +518,7 @@ li {
 
 }
 
-.project {
-  font-size: 4vw;
-  font-weight: 900;
-}
+
 
 .arduino {
   width: 15px;
@@ -482,15 +527,23 @@ li {
   background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn2.iconfinder.com%2Fdata%2Ficons%2Fcomputer-and-hardware-18%2F32%2FArduino_circuit_computer_device_electronics-128.png&f=1&nofb=1&ipt=372849b9cbc8e51d24017b004da1555aa06d5b2e9b72b24e0248c4f46dac2b04&ipo=images")
 }
 
-.top {
+.top-nav {
   display: flex;
   justify-content: space-between;
   height: 5vh;
 }
 
+.motto {
+  margin-top: -5vh;
+  text-align: center;
+  font-size: 1.5vw;
+  color: rgba(218, 165, 32, 1);
+}
+
 .scroller span {
   position: absolute;
   top: 0;
+
   animation: slide 20s infinite;
   font-weight: bold;
   color: goldenrod;
@@ -555,57 +608,133 @@ li {
 
 }
 
+.life-images {
+  margin-top: 5vh;
+  display: flex;
+  height: 50vh;
+  justify-content: center;
+}
+
+.life-images .light-slider {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  width: 90vw;
+  height: 88vh;
+}
 
 
 
-/* .top {
-  position: absolute;
-  z-index: 1;
+.hobby {
+  display: flex;
+  flex-direction: column;
+
+  width: 25vh;
+  height: 25vh;
+
+}
+
+.light-slider li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.image-container img {
   width: 30vw;
-  top: 0;
-  left: 0;
-  /* grid-column: 1/span 6;
-  grid-row: 1;
+  height: 25vw;
 
-  z-index: 1; */
-/* 
-} */
+  object-fit: cover;
+  border-radius: 10px;
 
-/* .middle {
-  position: absolute;
-  z-index: 1;
-  width: 30vw;
+}
+
+.slider {
+  width: 52vw;
   height: 30vw;
-  top: 0;
-  left: 300px;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5vh;
+  text-align: center;
+  overflow: hidden;
 }
 
-.bottom {
-  position: absolute;
-  z-index: 0;
-  width: 45vw;
-  top: 5px;
-  left: 100px;
-  /* grid-column: 4/-1;
-  grid-row: 1; */
-/* } */
 
+.image-container {
+  width: 2800vw;
 
-
-/* .stack-container img {
-  object-fit: cover;
-
-
-
-} */
-
-/* img .home {
-  width: 20%;
-  object-fit: cover;
+  height: 25vw;
+  clear: both;
+  position: relative;
+  -webkit-transition: left 2s;
+  -moz-transition: left 2s;
+  -o-transition: left 2s;
+  transition: left 2s;
 }
 
-.mid img {
-  width: 250px;
+.slide {
+  display: flex;
+  justify-content: space-evenly;
+  float: left;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+}
 
-  object-fit: cover
-} */
+.caption {
+  display: flex;
+
+  align-items: center;
+  width: 20vw;
+  height: 20vw;
+  padding-right: 2vw;
+}
+
+#slide-1:target~.image-container {
+  left: 0px;
+}
+
+#slide-2:target~.image-container {
+  left: -52vw;
+}
+
+#slide-3:target~.image-container {
+  left: -94vw;
+}
+
+#slide-4:target~.image-container {
+  left: -136vw;
+}
+
+#slide-5:target~.image-container {
+  left: -178vw;
+}
+
+#slide-6:target~.image-container {
+  left: -220vw;
+}
+
+#slide-7:target~.image-container {
+  left: -262vw;
+}
+
+.buttons {
+  position: relative;
+  top: -20px;
+}
+
+.connect {
+  text-align: center;
+}
+
+.buttons a {
+  margin-top: 4vh;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  border-radius: 50px;
+  background-color: rgb(202, 211, 119);
+
+  text-decoration: none
+}

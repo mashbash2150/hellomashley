@@ -8,11 +8,13 @@
   <link rel="stylesheet" type="text/css" href="style.css">
   <title>HelloMashley</title>
   <script src="https://kit.fontawesome.com/d403add618.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="js/lightslider.min.js"></script>
 </head>
 
 <body>
   <!-- <nav> -->
-  <div class="top">
+  <div class="top-nav">
     <div class="socials">
       <a href="https://github.com/mashbash2150/">
         <i class="fa-brands fa-square-github"></i>
@@ -25,26 +27,13 @@
     <div class="nav">
       <a class="nav-item" href="#about-anchor">About
         <a class="nav-item" href="#work-anchor">Work</a>
-        <a class="nav-item" href="#life-anchor">Life</a>
+        <a class="nav-item" href="#leisure-anchor">Leisure</a>
         <a class="nav-item" href="#connect-anchor">Connect</a>
     </div>
 
 
   </div>
-  <!-- <ul>
-      <li>About
-        <a href="#about-anchor">Test</a>
-      </li>
-      <li>Work
-        <a href="#work-anchor">Work</a>
-      </li>
-      <li>Life</li>
-      <li>Connect</li>
 
-
-    </ul> -->
-
-  <!-- </nav> -->
 
   <header>
 
@@ -62,16 +51,6 @@
 
       </div>
 
-      <!-- <div class="slider">
-        <div class="slide-track">
-          <div class="slide">thinker</div>
-          <div class="slide">tinkerer</div>
-          <div class="slide">wanderer</div>
-          <div class="slide">nature-lover</div>
-          <div class="slide">do it herself'er</div>
-          <div class="slide">solver</div>
-
-        </div> -->
     </div>
 
 
@@ -82,7 +61,7 @@
   <div class="scroll-container">
 
     <div class="scroller">
-      <!-- //<div class="static">and i'm a<br /></div> -->
+
       <span>
         tinkerer<br />
         ponderer<br />
@@ -92,7 +71,8 @@
         'do-it-herself'-er<br />
         solver<br />
         risk-taker<br />
-        noticer<br />
+        observer<br />
+        optimizer<br />
         lifelong learner<br />
       </span>
     </div>
@@ -100,7 +80,7 @@
   </div>
 
   <div class="dot-flex">
-    <!-- <div class="dot"></div> -->
+
     <i class="arrow down"></i>
     <i class="arrow down"></i>
     <i class="arrow down"></i>
@@ -113,7 +93,8 @@
     <div class="about">
       <div>
         Deciding it was time to upskill after over a decade spent in engineering-<em>adjacent</em> roles,
-        I've been busy immersing myself in the world of software development with the goal of breaking in once and for
+        I've been busy immersing myself in the world of software development with my sights set on breaking in once and
+        for
         all.
         I'm proud to have logged over 500 hours of rigorous structured learning as well countelss hours of
         self-guided exploration.
@@ -124,7 +105,7 @@
       <div>Though I have previous expertise in deeply technical realms including robotics, automation, and collaborative
         software
         applications - I've always had a strong passion for design and
-        aesthetics that I've not had
+        aesthetics that I've not yet had
         the privilege of exploring professionally. Through exercising my front-end chops in class, I've found
         deep fulfillment in using my right brain in the development process, which I've drawn from in the making of this
         website and the
@@ -144,116 +125,208 @@
     </div>
   </section>
   <section id="work-anchor">
-    <div class="dotted-left section-header">SELECTED WORK</div>
+    <details>
+      <summary>
+        <div class="dotted-left section-header">SELECTED WORK <span class="exp"><i
+              class="fa-solid fa-chevron-down"></i></span></div>
+
+      </summary>
 
 
 
-
-    <div class="p4 stack-container">
-      <div class="project-info">
-        <div class="project">LITTERLOGIC</div>
-        <div class="tech">
-          <i class="fa-brands fa-react"></i>
-          <i class="fa-brands fa-node-js"></i>
-          <i class="fa-brands fa-square-js"></i>
-          <i class="fa-brands fa-html5"></i>
-          <i class="fa-brands fa-css3-alt"></i>
-          <i class="fa-solid fa-microchip"></i>
+      <div class="p4 stack-container">
+        <div class="project-info">
+          <div class="project">LITTERLOGIC</div>
+          <div class="tech">
+            <i class="fa-brands fa-react"></i>
+            <i class="fa-brands fa-node-js"></i>
+            <i class="fa-brands fa-square-js"></i>
+            <i class="fa-brands fa-html5"></i>
+            <i class="fa-brands fa-css3-alt"></i>
+            <i class="fa-solid fa-microchip"></i>
+          </div>
+          <div>IOT + MERN Stack Concept App</div>
+          <button>GitHub Repo</button>
+          <button>Deployed App</button>
+          <button>Learn More</button>
         </div>
-        <div>IOT + MERN Stack Concept App</div>
-        <button>GitHub Repo</button>
-        <button>Deployed App</button>
-        <button>Learn More</button>
+        <img class="left litterlogic" alt='' src="media/LLSensor.jpg">
+        <img class="top litterlogic" alt='' src="media/Litterlogic1.png">
+        <img class="right revinyl" alt='' src="media/LitterLogic3.png">
       </div>
-      <img class="left litterlogic" alt='' src="media/LLSensor.jpg">
-      <img class="top litterlogic" alt='' src="media/Litterlogic1.png">
-      <img class="right revinyl" alt='' src="media/LitterLogic3.png">
-    </div>
-    <div class="p3 stack-container">
-      <div class="project-info">
-        <div class="project">REVINYL</div>
-        <div class="tech">
-          <i class="fa-brands fa-react"></i>
-          <i class="fa-brands fa-node-js"></i>
-          <i class="fa-brands fa-square-js"></i>
-          <i class="fa-brands fa-html5"></i>
-          <i class="fa-brands fa-css3-alt"></i>
+      <div class="p3 stack-container">
+        <div class="project-info">
+          <div class="project">REVINYL</div>
+          <div class="tech">
+            <i class="fa-brands fa-react"></i>
+            <i class="fa-brands fa-node-js"></i>
+            <i class="fa-brands fa-square-js"></i>
+            <i class="fa-brands fa-html5"></i>
+            <i class="fa-brands fa-css3-alt"></i>
+          </div>
+          <div>PERN Stack Concept app</div>
+          <button>GitHub Repo</button>
+          <button>Deployed App</button>
+          <button>Details</button>
         </div>
-        <div>PERN Stack Concept app</div>
-        <button>GitHub Repo</button>
-        <button>Deployed App</button>
-        <button>Details</button>
+        <img class="left revinyl" alt='' src="media/Revinyl-home.png">
+        <img class="top revinyl" alt='' src="media/Revinyl-records.png">
+        <img class="right revinyl" alt='' src="media/Revinyl-be-code.png">
       </div>
-      <img class="left revinyl" alt='' src="media/Revinyl-home.png">
-      <img class="top revinyl" alt='' src="media/Revinyl-records.png">
-      <img class="right revinyl" alt='' src="media/Revinyl-be-code.png">
-    </div>
-    <div class="p2 stack-container">
-      <div class="project-info">
-        <div class="project">MEET YOUR MAKER</div>
-        <div class="tech">
-          <i class="fa-brands fa-react"></i>
-          <i class="fa-brands fa-node-js"></i>
-          <i class="fa-brands fa-square-js"></i>
-          <i class="fa-brands fa-html5"></i>
-          <i class="fa-brands fa-css3-alt"></i>
+      <div class="p2 stack-container">
+        <div class="project-info">
+          <div class="project">MEET YOUR MAKER</div>
+          <div class="tech">
+            <i class="fa-brands fa-react"></i>
+            <i class="fa-brands fa-node-js"></i>
+            <i class="fa-brands fa-square-js"></i>
+            <i class="fa-brands fa-html5"></i>
+            <i class="fa-brands fa-css3-alt"></i>
+          </div>
+
+
+          <div>MERN Stack Concept app</div>
+          <button>GitHub Repo</button>
+          <button>Deployed App</button>
+          <button>Details</button>
         </div>
+        <img class="top mym" alt='' src="media/MYM-home.png">
 
+        <img class="left mym" alt='' src="media/MYM-Browse.png">
+        <img class="right mym" alt='' src="media/mym-code.png">
 
-        <div>MERN Stack Concept app</div>
-        <button>GitHub Repo</button>
-        <button>Deployed App</button>
-        <button>Details</button>
       </div>
-      <img class="top mym" alt='' src="media/MYM-home.png">
-
-      <img class="left mym" alt='' src="media/MYM-Browse.png">
-      <img class="right mym" alt='' src="media/mym-code.png">
-
-    </div>
-    <div class="p1 stack-container">
-      <div class="project-info">
-        <div class="project">FLASH</div>
-        <div class="tech">
-          <i class="fa-brands fa-square-js"></i>
-          <i class="fa-brands fa-html5"></i>
-          <i class="fa-brands fa-css3-alt"></i>
+      <div class="p1 stack-container">
+        <div class="project-info">
+          <div class="project">FLASH</div>
+          <div class="tech">
+            <i class="fa-brands fa-square-js"></i>
+            <i class="fa-brands fa-html5"></i>
+            <i class="fa-brands fa-css3-alt"></i>
+          </div>
+          <div>Simon-inspired Javascript Browser Game</div>
+          <button>GitHub Repo</button>
+          <button>Deployed App</button>
+          <button>Details</button>
         </div>
-        <div>Simon-inspired Javascript Browser Game</div>
-        <button>GitHub Repo</button>
-        <button>Deployed App</button>
-        <button>Details</button>
+        <img class="left" alt='' src="media/Flash-entrypoint.png">
+        <img class="top" alt='' src="media/Flash-home.png">
+
+        <img class="right" alt='' src="media/flash-code.png">
       </div>
-      <img class="left" alt='' src="media/Flash-entrypoint.png">
-      <img class="top" alt='' src="media/Flash-home.png">
-
-      <img class="right" alt='' src="media/flash-code.png">
-    </div>
-
-
-
-
-
+    </details>
   </section>
+
+  <details>
+    <summary>
+      <div id="leisure-anchor" class="dotted-left section-header">LEISURE <span class="exp"><i
+            class="fa-solid fa-chevron-down"></i></span>
+      </div>
+    </summary>
+    <div>
+      <div class="motto">Life is more fun when approached like a banquet.<br> Below are a few of the hobbies and
+        interests I've
+        filled
+        my plate with recently:
+
+
+      </div>
+      <div class="hobby-flex">
+
+      </div>
+    </div>
+    <div class="slider">
+      <span id="slide-1"></span>
+      <span id="slide-2"></span>
+      <span id="slide-3"></span>
+      <span id="slide-4"></span>
+      <span id="slide-5"></span>
+      <span id="slide-6"></span>
+      <span id="slide-7"></span>
+
+      <div class="image-container">
+        <div class="slide">
+          <div class="caption">I love to draw. Find me a better pen than the Micron. Go ahead...I'll wait.</div>
+          <img src="/media/lady.JPG" class="slide" />
+        </div>
+        <div class="slide">
+          <div class="caption">Occasionally I'll pick up a brush, too. Here is a sign I lettered for a friend's business
+            in Los Angeles.
+          </div>
+          <img src="/media/douglas.JPG" class="slide" />
+        </div>
+        <div class="slide">
+          <div class="caption">I love to watch things grow. Terarrium-building has been a fun way to explore that.</div>
+          <img src="/media/terrarium.JPG" />
+        </div>
+        <div class="slide">
+          <div class="caption">Of all of our 5 senses, I think olfaction is by far the most interesting. I've learned a
+            lot about its mysteries through taking perfuming classes at the Institute for Art and Olfaction. </div>
+          <img src="/media/olfaction.jpg" class="slide" />
+        </div>
+        <div class="slide">
+          <div class="caption">Perfecting my dimes at in TIG and MIG welding classes at the Crucible.</div>
+          <img src="/media/weld.JPG" class="slide" />
+        </div>
+        <div class="slide">
+          <div class="caption">Here's a portafilter hanger I designed and printed for my Gaggia Classic setup at home.
+            Coffee problems are fun ones to solve. </div>
+          <img src="/media/portafilter.png" class="slide" />
+        </div>
+        <div class="slide">
+          <div class="caption">Being outside lights me up, and I'm never bored if I'm adventuring. </div>
+          <img src="/media/adventure.JPG" class="slide" />
+        </div>
+
+
+      </div>
+      <div class="buttons">
+        <a href="#slide-1">1</a>
+        <a href="#slide-2">2</a>
+        <a href="#slide-3">3</a>
+        <a href="#slide-4">4</a>
+        <a href="#slide-5">5</a>
+        <a href="#slide-6">6</a>
+        <a href="#slide-7">7</a>
+      </div>
+    </div>
+    </div>
+  </details>
+  <!-- </section> -->
+
+
+
+
+
   <section>
-    <div class="dotted-left section-header">BONUS
+    <div>
+      <div class="dotted-left section-header">CONTACT</div>
+      <div class="connect">Want to Connect? </div>
+      <form>
+      </form>
+    </div>
+
     </div>
   </section>
-
+  <script>
+    $(document).ready(function () {
+      $("#lightSlider").lightSlider({ autoWidth: true });
+    });
+  </script>
 
 </body>
 <footer>
-  <div> &#xA9 Madeline Ashley 2022
-    <div class="footer-socials">
-      <a href="https://github.com/mashbash2150/">
-        <i class="fa-brands fa-square-github"></i>
-      </a>
-      <a href="https://www.linkedin.com/in/madeline-ashley/">
-        <i class="fa-brands fa-linkedin"></i>
-      </a>
-      <i class="fa-solid fa-file"></i>
-    </div>
+
+  <div class="footer-socials">
+    <a href="https://github.com/mashbash2150/">
+      <i class="fa-brands fa-square-github"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/madeline-ashley/">
+      <i class="fa-brands fa-linkedin"></i>
+
   </div>
+
+  <div> &#xA9 Madeline Ashley 2022</div>
 </footer>
 
 </html>
