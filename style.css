@@ -118,6 +118,19 @@ footer {
 
 }
 
+details[open] summary span.exp {
+  transform: rotate(180deg);
+}
+
+summary {
+  display: flex;
+  cursor: pointer;
+}
+
+.exp {
+  padding-left: 1vw;
+}
+
 .left {
   grid-column: 5/8;
   grid-row: 1;
