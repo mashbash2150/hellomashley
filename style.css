@@ -597,20 +597,7 @@ li {
 
 }
 
-.life-images {
-  margin-top: 5vh;
-  display: flex;
-  height: 50vh;
-  justify-content: center;
-}
 
-.life-images .light-slider {
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  width: 90vw;
-  height: 88vh;
-}
 
 
 
@@ -689,23 +676,23 @@ li {
 }
 
 #slide-3:target~.image-container {
-  left: -94vw;
+  left: -104vw;
 }
 
 #slide-4:target~.image-container {
-  left: -136vw;
+  left: -156vw;
 }
 
 #slide-5:target~.image-container {
-  left: -178vw;
+  left: -208vw;
 }
 
 #slide-6:target~.image-container {
-  left: -220vw;
+  left: -260vw;
 }
 
 #slide-7:target~.image-container {
-  left: -262vw;
+  left: -312vw;
 }
 
 .buttons {
