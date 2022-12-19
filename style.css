@@ -85,9 +85,10 @@ footer {
 .stack-container {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 30vw;
+  grid-template-rows: 27vw;
   position: relative;
   margin-top: 5vh;
+  flex-wrap: wrap;
 
 }
 
@@ -104,7 +105,7 @@ footer {
   text-align: center;
 
   align-items: center;
-  font-size: 2.5vw;
+  font-size: 2vw;
   font-weight: 900;
 }
 
@@ -113,7 +114,7 @@ footer {
   flex-direction: column;
   justify-content: center;
   grid-column: 1/span 3;
-  grid-row: 1;
+  grid-row: 1/1;
   text-align: center;
 
 }
@@ -136,7 +137,7 @@ summary {
   grid-column: 5/8;
   grid-row: 1;
   opacity: 0.5;
-  padding-top: 2vh;
+  padding-top: 0.5vw;
 
 }
 
@@ -172,13 +173,13 @@ summary {
   grid-column: 9/12;
   grid-row: 1;
   opacity: 0.3;
-  margin-top: 2vh;
+  margin-top: 0.5vw;
 }
 
 section img {
   object-fit: cover;
-  width: 30vw;
-  height: 30vw;
+  width: 25vw;
+  height: 25vw;
   ;
   transition: opacity 0.5s ease-in-out;
   transition: transform 0.3s ease-in-out;
@@ -257,11 +258,17 @@ section img:hover {
   height: 100vh;
 }
 
+a {
+  cursor: pointer;
+}
+
 button {
   font-family: 'Montserrat', sans-serif;
-  padding: 1vh 0 1vh 0;
+  padding: 1vh 0vw 1vh 0;
   margin-top: 1vh;
   border: none;
+
+  width: 15vw;
   background-color: rgba(97, 134, 189, 0.312);
 
 }
@@ -293,26 +300,7 @@ button {
   font-weight: 900;
 }
 
-.hobby img {
-  z-index: 1;
-  object-fit: cover;
-  width: 25vw;
-  height: 25vw;
-  ;
-  opacity: 1.0;
 
-  transition: transform 0.3s ease-in-out;
-  border-radius: 10px;
-
-}
-
-hobby div:hover {
-  z-index: 5;
-  opacity: 1;
-  transform: scale(1.4);
-  transform: translateY(-10vh);
-
-}
 
 
 
