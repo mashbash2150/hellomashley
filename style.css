@@ -128,7 +128,7 @@ summary {
 }
 
 .exp {
-  padding-left: 1vw;
+  padding-left: 2vw;
 }
 
 .left {
@@ -536,12 +536,14 @@ li {
 .motto {
   margin-top: -5vh;
   text-align: center;
-  font-size: 2vw;
+  font-size: 1.5vw;
+  color: rgba(218, 165, 32, 1);
 }
 
 .scroller span {
   position: absolute;
   top: 0;
+
   animation: slide 20s infinite;
   font-weight: bold;
   color: goldenrod;
@@ -636,4 +638,103 @@ li {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.image-container img {
+  width: 30vw;
+  height: 25vw;
+
+  object-fit: cover;
+  border-radius: 10px;
+
+}
+
+.slider {
+  width: 52vw;
+  height: 30vw;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5vh;
+  text-align: center;
+  overflow: hidden;
+}
+
+
+.image-container {
+  width: 2800vw;
+
+  height: 25vw;
+  clear: both;
+  position: relative;
+  -webkit-transition: left 2s;
+  -moz-transition: left 2s;
+  -o-transition: left 2s;
+  transition: left 2s;
+}
+
+.slide {
+  display: flex;
+  justify-content: space-evenly;
+  float: left;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+}
+
+.caption {
+  display: flex;
+
+  align-items: center;
+  width: 20vw;
+  height: 20vw;
+  padding-right: 2vw;
+}
+
+#slide-1:target~.image-container {
+  left: 0px;
+}
+
+#slide-2:target~.image-container {
+  left: -52vw;
+}
+
+#slide-3:target~.image-container {
+  left: -94vw;
+}
+
+#slide-4:target~.image-container {
+  left: -136vw;
+}
+
+#slide-5:target~.image-container {
+  left: -178vw;
+}
+
+#slide-6:target~.image-container {
+  left: -220vw;
+}
+
+#slide-7:target~.image-container {
+  left: -262vw;
+}
+
+.buttons {
+  position: relative;
+  top: -20px;
+}
+
+.connect {
+  text-align: center;
+}
+
+.buttons a {
+  margin-top: 4vh;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  border-radius: 50px;
+  background-color: rgb(202, 211, 119);
+
+  text-decoration: none
 }
