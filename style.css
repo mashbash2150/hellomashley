@@ -68,7 +68,8 @@ footer {
 }
 
 .section-header {
-  font-size: 3vh;
+  font-size: 3.5vw;
+  margin-bottom: 2vw;
 }
 
 .dotted-left {
@@ -88,6 +89,8 @@ footer {
   grid-template-rows: 27vw;
   position: relative;
   margin-top: 5vh;
+  margin-bottom: 5vh;
+  padding-bottom: 5vh;
   flex-wrap: wrap;
 
 }
@@ -105,7 +108,7 @@ footer {
   text-align: center;
 
   align-items: center;
-  font-size: 2vw;
+  font-size: 2.5vw;
   font-weight: 900;
 }
 
@@ -116,6 +119,7 @@ footer {
   grid-column: 1/span 3;
   grid-row: 1/1;
   text-align: center;
+  font-size: 2.5vw;
 
 }
 
@@ -240,7 +244,7 @@ section img:hover {
 }
 
 .tech i {
-  font-size: 2vh;
+  font-size: 1.5vw;
   padding: 1vh;
 }
 
@@ -494,12 +498,12 @@ li {
 .scroller {
   display: flex;
   justify-content: center;
-  height: 3vw;
+  height: 4vw;
   line-height: 1.2em;
   position: relative;
   overflow: hidden;
-  width: 30vw;
-  font-size: 2.5vw;
+  width: 40vw;
+  font-size: 4vw;
   text-align: center;
   margin-top: 3vh;
   margin-bottom: 2vh;
@@ -760,4 +764,76 @@ li {
 .tooltip:hover .tooltiptext {
   visibility: visible;
   opacity: 1;
+}
+
+
+@media screen and (max-width: 600px) {
+  .project-info {
+
+    display: flex;
+    flex-direction: column;
+    font-size: 3vw;
+  }
+
+  .project {
+    font-size: 5vw;
+  }
+
+  .tech i {
+    font-size: 3vw;
+  }
+
+
+
+
+  .stack-container {
+    /* display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 27vw 27vw;
+    position: relative; */
+    margin: auto;
+    display: inline-block;
+    text-align: center;
+    width: 100vw;
+
+
+  }
+
+
+  .scroller {
+    display: flex;
+
+    justify-content: center;
+    height: 5vw;
+    line-height: 1.2em;
+    position: relative;
+    overflow: hidden;
+    width: 40vw;
+    font-size: 5vw;
+    text-align: center;
+    margin-top: 3vh;
+    margin-bottom: 2vh;
+    padding: 0;
+
+  }
+
+  .dev {
+    font-size: 5.5vw;
+  }
+
+  .proj-links {
+    display: flex;
+    justify-content: center;
+  }
+
+  .proj-links button {
+    width: 30vw;
+    margin: 2vw;
+  }
+
+  .top {
+    margin: 0 2vw 0 2vw;
+  }
+
+
 }
