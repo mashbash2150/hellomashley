@@ -181,7 +181,7 @@ summary {
   margin-top: 0.5vw;
 }
 
-section img {
+#work-anchor img {
   object-fit: cover;
   width: 25vw;
   height: 25vw;
@@ -203,7 +203,7 @@ section img {
   padding: 0.5vw 0 0 1vw;
 }
 
-section img:hover {
+.proj-img img:hover {
   z-index: 5;
   opacity: 1;
   transform: scale(1.4);
@@ -250,15 +250,7 @@ section img:hover {
   padding: 1vh;
 }
 
-.hobby div {
-  z-index: 5;
-  background-color: rgba(218, 165, 32, 1);
-  width: 25vw;
-  position: absolute;
-  bottom: 0;
-  border-radius: 0 0 10px 10px;
-  text-align: center;
-}
+
 
 .section-hobby {
   height: 100vh;
@@ -302,8 +294,8 @@ button {
 .nav a {
   text-decoration: none;
   color: black;
-  font-size: 2vw;
-  padding: 0 2vw 0 2vw;
+  font-size: 1.5vw;
+  padding: 0 1.5vw 0 1.5vw;
   font-weight: 900;
 }
 
@@ -364,7 +356,7 @@ button {
 
 } */
 
-@keyframes scroll {
+/* @keyframes scroll {
   0% {
     transform: translateY(0);
   }
@@ -372,7 +364,7 @@ button {
   100% {
     transform: translateY(calc(-250px * 7))
   }
-}
+} */
 
 
 
@@ -453,6 +445,130 @@ button {
 
 
 
+.hobby-container {
+  display: grid;
+  grid-gap: 2vw;
+  grid-template-columns: repeat(auto-fill, minmax(28vw, 1fr));
+  margin: 0 2vw 0 2vw;
+
+}
+
+.hobby-flex {
+  position: relative;
+}
+
+.hobby-etc {
+  position: relative;
+}
+
+.etc {
+
+  width: 30vw;
+  border: 1px dashed grey;
+  color: grey;
+  border-radius: 10px;
+  padding: 45% 0 45% 0;
+  text-align: center;
+
+  background-color: rgba(203, 163, 62, 0.4)
+}
+
+
+
+.hobby-flex img {
+
+  width: 30vw;
+  height: 30vw;
+  object-fit: cover;
+  border-radius: 10px;
+
+
+}
+
+.hobby-caption {
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 1.5vw;
+  text-align: left;
+  vertical-align: middle;
+  padding-top: 30%;
+  line-height: 2vh;
+  background-color: beige;
+  width: 30vw;
+  height: 30vw;
+  z-index: 0;
+  visibility: none;
+  opacity: 0;
+  transition: opacity 0.3s;
+  color: goldenrod;
+
+}
+
+.etc-caption {
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 1.5vw;
+  text-align: left;
+  padding-top: 10%;
+  line-height: 2vh;
+  background-color: beige;
+  width: 30vw;
+  height: 30vw;
+  z-index: 0;
+  visibility: none;
+  opacity: 0;
+  transition: opacity 0.3s;
+  color: goldenrod;
+
+}
+
+
+
+.hobby-flex:hover .hobby-caption {
+  visibility: visible;
+  opacity: 1;
+
+}
+
+
+.hobby-etc:hover .etc-caption {
+  visibility: visible;
+  opacity: 1;
+
+}
+
+
+
+/* .hobby img {
+  height: 30vw;
+  width: 30vw;
+
+
+  object-fit: cover;
+
+} */
+
+*/
+/* .hobby img:hover {
+
+  width: 27vw;
+  height: 27vw;
+  object-fit: cover;
+  opacity: 0;
+} */
+
+/* .hobby:hover {
+  text-align: right;
+  font-size: 3vh;
+  background-color: rgba(80, 79, 79, 0.916);
+  color: aliceblue;
+} */
+
+
 
 ul {
   margin: 0;
@@ -529,13 +645,31 @@ li {
   height: 5vh;
 }
 
-.motto {
+
+
+
+.what img {
+  width: 27vw;
+  height: 27vw;
+}
+
+
+.what img:hover {
+  width: 30vw;
+  height: 30vw;
+  object-fit: cover;
+  margin: 1vh;
+  border-radius: 10px;
+  background-color: black;
+}
+
+/* .motto {
   margin-right: 2vw;
   text-align: right;
 
   color: rgba(218, 165, 32, 1);
   width: 20vw;
-}
+} */
 
 .scroller span {
   position: absolute;
@@ -556,7 +690,7 @@ li {
 
 .dev {
   text-align: center;
-  font-size: 3vh;
+  font-size: 3.5vw;
   margin-bottom: 9vh;
   text-shadow: 5px 0 15px #878786d2;
 }
@@ -605,17 +739,11 @@ li {
 
 }
 
-.hobby-flex {
-  display: flex;
-
-  justify-content: center;
-
-
-}
 
 
 
 
+/* 
 .hobby {
   display: flex;
   flex-direction: column;
@@ -623,11 +751,11 @@ li {
   width: 25vh;
   height: 25vh;
 
-}
+} */
 
 
 .image-container img {
-  width: 30vw;
+  width: 25vw;
   height: 25vw;
 
   object-fit: cover;
@@ -649,36 +777,39 @@ li {
 
 
 .image-container {
-  width: 2800vw;
 
+  display: flex;
+  flex-wrap: wrap;
   height: 25vw;
-  clear: both;
+  /* clear: both;
   position: relative;
   -webkit-transition: left 2s;
   -moz-transition: left 2s;
   -o-transition: left 2s;
-  transition: left 2s;
+  transition: left 2s; */
 }
 
 .slide {
   display: flex;
+  flex-direction: column;
   justify-content: space-evenly;
-  float: left;
+  align-items: flex-start;
+  /* float: left; */
   margin: 0px;
   padding: 0px;
   position: relative;
 }
 
-.caption {
+/* .caption {
   display: flex;
   text-align: left;
   padding-left: 2vw;
   align-items: center;
   width: 20vw;
   padding-right: 2vw;
-}
+} */
 
-#slide-1:target~.image-container {
+/* #slide-1:target~.image-container {
   left: 0px;
 }
 
@@ -704,7 +835,7 @@ li {
 
 #slide-7:target~.image-container {
   left: -325vw;
-}
+} */
 
 .buttons {
   position: relative;
@@ -810,12 +941,12 @@ li {
   display: flex;
 
   justify-content: center;
-  height: 5vw;
+  height: 3vw;
   line-height: 1.2em;
   position: relative;
   overflow: hidden;
   width: 40vw;
-  font-size: 5vw;
+  font-size: 3vw;
   text-align: center;
   margin-top: 3vh;
   margin-bottom: 2vh;
@@ -823,9 +954,7 @@ li {
 
 }
 
-.dev {
-  font-size: 5.5vw;
-}
+
 
 .proj-links {
   display: flex;
@@ -842,6 +971,8 @@ li {
 }
 
 
+
+
 @media screen and (max-width: 600px) {
   .section-header {
     font-size: 5vw;
@@ -849,7 +980,7 @@ li {
   }
 
   .nav a {
-    font-size: 3vw;
+    font-size: 2vw;
   }
 
   .socials i {
@@ -874,6 +1005,131 @@ li {
     opacity: 0.5;
     z-index: 0;
     margin-top: -15vh;
+
+  }
+
+  .stack-container {
+    /* display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 27vw 27vw;
+    position: relative; */
+    margin: auto;
+
+    text-align: center;
+    width: 100vw;
+
+
+  }
+
+  .proj-img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .proj-img img {
+    width: 70vw;
+    height: 70vw;
+    margin-bottom: 2vh;
+  }
+
+  .proj-links {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .tech i {
+    font-size: 2vh;
+    padding: 1vh;
+  }
+
+  .project {
+    font-size: 3vh;
+  }
+
+
+
+  .caption {
+    width: 100vw;
+  }
+
+  .motto {
+    width: 90vw;
+    text-align: center;
+  }
+
+
+
+  .hobby-container {
+    display: grid;
+    grid-gap: 2vw;
+    grid-template-columns: repeat(auto-fill, minmax(70vw, 1fr));
+    margin: 0 2vw 0 2vw;
+
+  }
+
+  .hobby-flex img {
+
+    width: 90vw;
+    height: 70vw;
+    margin: auto;
+    object-fit: cover;
+    border-radius: 10px;
+
+
+  }
+
+  .etc {
+
+    width: 90vw;
+    border: 1px dashed grey;
+    color: grey;
+    border-radius: 10px;
+    padding: 45% 0 45% 0;
+    text-align: center;
+
+    background-color: rgba(203, 163, 62, 0.4)
+  }
+
+  .hobby-caption {
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 5vw;
+    text-align: left;
+    vertical-align: middle;
+    padding-top: 30%;
+    line-height: 2.5vh;
+    background-color: beige;
+    width: 90vw;
+    height: 90vw;
+    z-index: 0;
+    visibility: none;
+    opacity: 0;
+    transition: opacity 0.3s;
+    color: goldenrod;
+
+  }
+
+  .etc-caption {
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 5vw;
+    text-align: left;
+    padding-top: 10%;
+    line-height: 2.5vh;
+    background-color: beige;
+    width: 90vw;
+    height: 90vw;
+    z-index: 0;
+    visibility: none;
+    opacity: 0;
+    transition: opacity 0.3s;
+    color: goldenrod;
 
   }
 
