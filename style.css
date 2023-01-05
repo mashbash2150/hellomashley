@@ -175,6 +175,18 @@ summary {
   text-align: left;
 } */
 
+.copy {
+  margin: 4vh;
+}
+
+.footer-res button {
+  width: 20vw;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+
+}
+
 .right {
   grid-column: 9/12;
   grid-row: 1;
@@ -691,7 +703,8 @@ li {
 
 .dev {
   text-align: center;
-  font-size: 3.5vw;
+  font-size: clamp(1.75rem, 5vw, 3rem);
+
   margin-bottom: 9vh;
   text-shadow: 5px 0 15px #878786d2;
 }
@@ -845,9 +858,9 @@ li {
 }
 
 .connect {
-
+  line-height: 5vw;
   text-align: center;
-  font-size: 2vw;
+  font-size: 2.5vw;
 }
 
 .buttons a {
@@ -986,13 +999,25 @@ a {
   }
 
   .nav a {
-    font-size: 2vw;
+    font-size: 3vw;
+    margin: 0 1.5vw;
   }
 
   .socials i {
-    font-size: 4vw;
-    padding-left: 5vw;
+    font-size: 6vw;
+    padding: 1vh;
   }
+
+  .socials {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+
+  }
+
 
   .header-first {
     font-size: 10vw;
