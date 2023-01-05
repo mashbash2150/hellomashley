@@ -167,6 +167,7 @@ summary {
   line-height: 2vh;
   font-family: 'Montserrat', sans-serif;
   word-spacing: 0.7vh;
+  color: grey;
 }
 
 /* .about span {
@@ -265,7 +266,7 @@ button {
   padding: 1vh 0vw 1vh 0;
   margin-top: 1vh;
   border: none;
-
+  cursor: pointer;
   width: 15vw;
   background-color: rgba(97, 134, 189, 0.312);
 
@@ -844,7 +845,9 @@ li {
 }
 
 .connect {
+
   text-align: center;
+  font-size: 2vw;
 }
 
 .buttons a {
@@ -854,8 +857,11 @@ li {
   width: 20px;
   border-radius: 50px;
   background-color: rgb(202, 211, 119);
-
   text-decoration: none
+}
+
+a {
+  z-index: 3;
 }
 
 .tooltip {
