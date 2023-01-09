@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@500&family=Bai+Jamjuree:wght@300&family=Monoton&family=Montserrat:wght@200&family=Orbitron&family=Syncopate&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@500&family=Monoton&family=Montserrat:wght@200&family=Orbitron&family=Syncopate&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@300&family=Bebas+Neue&family=Montserrat:wght@200&display=swap');
+
 
 
 .App {
@@ -68,7 +68,7 @@ footer {
 }
 
 .section-header {
-  font-size: 3.5vw;
+  font-size: clamp(1rem, 3.5vw, 2rem);
   margin-bottom: 5vh;
   color: rgba(218, 165, 32, 1);
 }
@@ -106,10 +106,10 @@ footer {
 .project {
   grid-column: 1/4;
   grid-row: 1;
-  text-align: center;
+  text-align: left;
 
-  align-items: center;
-  font-size: 2.5vw;
+
+  font-size: 4vw;
   font-weight: 900;
 }
 
@@ -119,7 +119,7 @@ footer {
   justify-content: center;
   grid-column: 1/span 3;
   grid-row: 1/1;
-  text-align: center;
+  text-align: left;
   font-size: 2.5vw;
 
 }
@@ -153,6 +153,20 @@ summary {
   align-items: center;
   margin: -2vh;
 
+}
+
+.underlay {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 8vw;
+  color: grey;
+  z-index: -1;
+
+  opacity: 0.3
+}
+
+.section-grid {
+  display: grid;
+  background-color: rgba(192, 189, 189, 0.353);
 }
 
 .socials a {
@@ -194,10 +208,10 @@ summary {
   margin-top: 0.5vw;
 }
 
-#work-anchor img {
+.proj-img img {
   object-fit: cover;
-  width: 25vw;
-  height: 25vw;
+  width: 27vw;
+  height: 27vw;
   ;
   transition: opacity 0.5s ease-in-out;
   transition: transform 0.3s ease-in-out;
@@ -254,7 +268,7 @@ summary {
 
 .socials i {
 
-  font-size: 3vw;
+  font-size: 3.5vw;
   padding-left: 5vw;
 }
 
@@ -307,7 +321,7 @@ button {
 .nav a {
   text-decoration: none;
   color: black;
-  font-size: 1.5vw;
+  font-size: 2vw;
   padding: 0 1.5vw 0 1.5vw;
   font-weight: 900;
 }
@@ -931,9 +945,7 @@ a {
   font-size: 3vw;
 }
 
-.project {
-  font-size: 5vw;
-}
+
 
 .tech i {
   font-size: 3vw;
@@ -1040,16 +1052,9 @@ a {
   }
 
   .stack-container {
-    /* display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 27vw 27vw;
-    position: relative; */
     margin: auto;
-
     text-align: center;
     width: 100vw;
-
-
   }
 
   .proj-img {
@@ -1062,7 +1067,16 @@ a {
   .proj-img img {
     width: 70vw;
     height: 70vw;
+    object-fit: cover;
     margin-bottom: 2vh;
+  }
+
+  .proj-img img:hover {
+    z-index: 5;
+    opacity: 1;
+    transform: scale(1.4);
+    transform: translateY(0vh);
+
   }
 
   .proj-links {
