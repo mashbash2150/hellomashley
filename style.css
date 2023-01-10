@@ -1,10 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@300&family=Bebas+Neue&family=Montserrat:wght@200&display=swap');
-
+/* 
+ */
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@300&family=Bebas+Neue&family=Literata:opsz,wght@7..72,700&family=Montserrat:wght@200&family=Oswald&family=Quattrocento&display=swap');
 
 
 .App {
   width: 95%;
-  font-family: 'Bai Jamjuree', sans-serif;
+  font-family: 'Quattrocento', serif;
 
 }
 
@@ -40,6 +41,7 @@ body {
 
 
 .header-first {
+  letter-spacing: 1.5vw;
   font-size: 7vw;
   z-index: 1;
   text-decoration: line-through;
@@ -47,7 +49,7 @@ body {
 }
 
 .header-last {
-
+  letter-spacing: 1vw;
   margin-bottom: 4vh;
   font-size: 3vw;
   z-index: 20;
@@ -86,16 +88,30 @@ body {
 .stack-container {
   display: flex;
   grid-column-start: 2;
-  justify-content: space-between;
-  align-items: center;
-
-
+  justify-content: space-around;
+  align-items: flex-start;
   padding: 5vh 0;
   flex-wrap: wrap;
 
 
 
 }
+
+/* .p4 {
+  grid-row-start: 2;
+}
+
+.p3 {
+  grid-row-start: 3;
+}
+
+.p2 {
+  grid-row-start: 4;
+}
+
+.p1 {
+  grid-row-start: 5;
+} */
 
 
 .top {
@@ -108,7 +124,7 @@ body {
 .project {
   grid-column-start: 2;
   grid-row: 1;
-  text-align: right;
+
 
 
   font-size: 4vw;
@@ -119,11 +135,29 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  width: 40vw;
-  text-align: right;
+  width: 32vw;
+  height: 28vw;
+  text-align: center;
   font-size: 2.5vw;
+  overflow-wrap: break-word;
+
 
 }
+
+/* .blurb {
+  display: flex;
+  align-items: center;
+  font-size: 1.75vh;
+  width: 30vw;
+
+  margin-bottom: 2vh;
+  text-align: center;
+  line-height: 2vh;
+  font-family: 'Montserrat', sans-serif;
+  word-spacing: 0.7vh;
+  color: grey;
+} */
+
 
 
 
@@ -162,8 +196,8 @@ summary {
 }
 
 .underlay {
-  font-family: 'Bebas Neue', cursive;
-  font-size: 14vw;
+  font-family: 'Oswald', sans-serif;
+  font-size: 10vw;
   color: grey;
   z-index: -1;
   margin-top: 2vw;
@@ -236,12 +270,12 @@ summary {
 
 .proj-img img {
   object-fit: cover;
-  width: 37vw;
-  height: 32vw;
+  width: 35vw;
+  height: 28vw;
   ;
   transition: opacity 0.5s ease-in-out;
   transition: transform 0.3s ease-in-out;
-  border-radius: 10px;
+
   opacity: 0.7;
 
 
@@ -418,12 +452,15 @@ button {
 }
 
 .etc {
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 30vw;
+  height: 30vw;
   border: 1px dashed grey;
   color: grey;
   border-radius: 10px;
-  padding: 45% 0 45% 0;
+
   text-align: center;
 
   background-color: rgba(203, 163, 62, 0.4)
@@ -645,9 +682,10 @@ li {
 
 
 .dev {
+  letter-spacing: 0.3vw;
   text-align: center;
   font-size: clamp(1.75rem, 5vw, 3rem);
-
+  font-family: 'Montserrat', sans-serif;
   margin-bottom: 9vh;
   text-shadow: 5px 0 15px #878786d2;
 }
@@ -858,9 +896,6 @@ a {
 
 }
 
-.top {
-  margin: 0 2vw 0 2vw;
-}
 
 
 
@@ -894,10 +929,14 @@ a {
 
   .header-first {
     font-size: 10vw;
+
+
   }
 
   .header-last {
     font-size: 6vw;
+
+
   }
 
   .circle-four img {
