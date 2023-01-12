@@ -682,7 +682,7 @@ button {
 .dev {
   letter-spacing: 0.3vw;
   text-align: center;
-  font-size: clamp(1.75rem, 5vw, 3rem);
+  font-size: clamp(1.75rem, 4vw, 3rem);
   font-family: 'Montserrat', sans-serif;
   margin: 2vh 0 20vh 0;
   text-shadow: 2px 2px 12px #f5dcd0d2;
@@ -916,6 +916,12 @@ a {
     margin-bottom: 5vh;
   }
 
+  .about div {
+    font-size: 2.2vh;
+    line-height: 2.5vh;
+    padding: 2vw;
+  }
+
   .nav a {
     font-size: 3vw;
     margin: 0 1.5vw;
@@ -938,7 +944,7 @@ a {
 
 
   .header-first {
-    font-size: 7vw;
+    font-size: 4.2vh;
 
 
   }
@@ -1103,5 +1109,7 @@ a {
     grid-template-columns: 15vw 85vw;
   }
 
-
+  .dev {
+    font-size: 2vh;
+  }
 }
