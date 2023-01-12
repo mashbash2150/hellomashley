@@ -23,6 +23,8 @@
   --text: #F9F6F0;
   --contrast: #C4AE78;
   --border: #82807F;
+  --buttons: goldenrod;
+  --tech: rgb(103, 103, 165);
   --item-count: 6;
   --item: 1 / --item-count
 }
@@ -84,7 +86,7 @@ body {
   object-fit: cover;
   width: 30vh;
   height: 30vh;
-  border: 2px dashed var(--contrast);
+  /* border: 2px dashed var(--contrast); */
   border-radius: 50%;
   opacity: 0.85;
   z-index: 0;
@@ -168,7 +170,7 @@ body {
   flex-direction: column;
   justify-content: space-evenly;
   width: 32vw;
-  height: 28vw;
+  height: 27vw;
   text-align: center;
   font-size: 2.5vw;
   overflow-wrap: break-word;
@@ -220,14 +222,17 @@ summary {
   justify-content: center;
   align-items: center;
   padding: 3vw;
+  text-align: left;
   border-top: 2px dotted rgba(0, 0, 0, 0.366);
 
 }
 
 .about div {
   font-size: 2.2vh;
-  line-height: 2.5vw;
+  line-height: 4.5vw;
   padding: 2vw;
+  text-align: left;
+
 }
 
 .underlay {
@@ -389,7 +394,7 @@ button {
   border: none;
   cursor: pointer;
   width: 15vw;
-  background-color: var(--contrast);
+  background-color: var(--buttons);
 
 }
 
@@ -510,9 +515,7 @@ button {
 }
 
 
-.about {
-  text-align: center;
-}
+
 
 
 
@@ -624,7 +627,7 @@ button {
 
 .topic {
   padding: 0;
-  margin: 1.5vw 0;
+  margin-bottom: 1.5vw;
   font-family: 'Oswald', sans-serif;
   font-size: 5vh;
   color: rgba(128, 128, 128, 0.313);
@@ -644,6 +647,12 @@ button {
   display: flex;
   justify-content: space-between;
   height: 5vh;
+}
+
+.italic {
+
+  font-style: italic;
+  font-weight: 900;
 }
 
 
@@ -671,7 +680,7 @@ button {
   top: 0;
   animation: slide 20s infinite;
   font-weight: bold;
-  color: var(--contrast);
+  color: var(--buttons);
   text-align: center;
 }
 
@@ -827,7 +836,7 @@ a {
 
 .tech i {
   font-size: 3vw;
-  color: var(--contrast)
+  color: var(--tech)
 }
 
 
@@ -884,8 +893,9 @@ a {
   }
 
   .about div {
-    font-size: 3vh;
+    font-size: 2.5vh;
     line-height: 4vh;
+    text-align: left;
 
   }
 
@@ -896,6 +906,7 @@ a {
 
   .about {
     padding-top: 5vh;
+    text-align: left;
   }
 
 
@@ -910,34 +921,32 @@ a {
 }
 
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
   .section-header {
     font-size: 5vw;
     margin-bottom: 5vh;
   }
 
   .about div {
-    font-size: 2.2vh;
+    font-size: 1.75vh;
     line-height: 2.5vh;
     padding: 2vw;
+    text-align: left;
   }
 
   .nav a {
-    font-size: 3vw;
+    font-size: 2.5vw;
     margin: 0 1.5vw;
   }
 
   .socials i {
-    font-size: 6vw;
-    padding: 1vh;
+    font-size: 4vw;
+    padding: 2vh;
   }
 
   .socials {
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-    align-items: flex-start;
-    justify-content: flex-start;
+    margin: -1vw 0 0 2vw;
+
 
 
   }
@@ -961,7 +970,7 @@ a {
     object-fit: cover;
     width: 50vw;
     height: 50vw;
-    border: 2px dashed rgba(19, 19, 18, 0.258);
+    /* border: 2px dashed rgba(19, 19, 18, 0.258); */
     border-radius: 50%;
     opacity: 0.5;
     z-index: 0;
