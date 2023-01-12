@@ -3,6 +3,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@300&family=Bebas+Neue&family=Literata:opsz,wght@7..72,700&family=Montserrat:wght@200&family=Oswald&family=Quattrocento&display=swap');
 
 
+
+/* :root {
+  --back: beige;
+  --text: #52514f95;
+  --contrast: goldenrod;
+  --border: black;
+} */
+/* :root {
+  --back: #414754;
+  --contrast: #b44d61;
+  --text: #E5D7BE;
+  --border: #82807F;
+} */
+
+
+:root {
+  --back: #171515;
+  --text: #F9F6F0;
+  --contrast: #C4AE78;
+  --border: #82807F;
+}
+
 .App {
   width: 95%;
   font-family: 'Quattrocento', serif;
@@ -18,9 +40,9 @@ body {
   width: 97%;
   margin: 0;
   padding: 0;
-  background-color: beige;
+  background-color: var(--back);
   font-family: 'Montserrat', sans-serif;
-  color: rgba(50, 50, 48, 0.644);
+  color: var(--text);
   /* background-color: rgba(136, 155, 58, 0.235); */
 }
 
@@ -44,8 +66,8 @@ body {
 
   font-size: 7vw;
   z-index: 1;
-  text-decoration: line-through;
-  text-decoration: rgba(218, 165, 32, 0.6) 2px dotted line-through;
+  /* text-decoration: line-through;
+  text-decoration: var(--contrast) 2px dotted line-through; */
 }
 
 .header-last {
@@ -53,19 +75,41 @@ body {
   margin-bottom: 4vh;
   font-size: 3vw;
   z-index: 20;
-  text-decoration: rgba(218, 165, 32, 1) 2px dotted line-through;
+  text-decoration: var(--contrast) 2px dotted line-through;
 }
 
 .circle-four img {
   object-fit: cover;
   width: 30vh;
   height: 30vh;
-  border: 2px dashed rgba(19, 19, 18, 0.258);
+  border: 2px dashed var(--contrast);
   border-radius: 50%;
-  opacity: 0.5;
+  opacity: 0.85;
   z-index: 0;
-  margin-top: -15vh;
+  /* margin-top: -15vh; */
+  margin-top: 2vh;
 
+}
+
+.hobby-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-content: space-between;
+  height: 30vw;
+
+}
+
+.hobby-header div {
+  margin: auto 4vw;
+  font-size: 4vw;
+
+}
+
+.hobby-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .section-header {
@@ -140,8 +184,17 @@ body {
   text-align: center;
   font-size: 2.5vw;
   overflow-wrap: break-word;
+}
 
+.leisure-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 32vw;
+  height: 28vw;
+  font-size: 2vw;
 
+  overflow-wrap: break-word;
 }
 
 /* .blurb {
@@ -241,16 +294,74 @@ summary {
 
 
 .section-grid {
-  padding-top: 3vh;
-  margin-left: -3vw;
+  padding-top: 5vh;
+  margin: 10vh 0 0 -3vw;
+
   display: grid;
   grid-template-columns: 15vw 85vw;
+}
 
+
+
+/* .list {
+  display: grid;
+  grid-template-columns: 20vw 80vw;
+  grid-column: 2/3;
+  grid-row: 1/2;
+} */
+
+/* .list div {
+  grid-column: 1/2;
+  grid-row: 1/2;
+} */
+
+/* .list img {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  width: 20vw;
+  height: 10vw;
+  visibility: hidden;
+} */
+/* .list .hide {
+  grid-column: 2/3;
+  grid-row: 1/2;
+} */
+
+/* .hide img {
+
+  width: 20vw;
+  height: 10vw;
+  visibility: hidden;
+}
+
+.list .sublist img {
+  display: grid;
+  grid-column: 2/3;
 
 }
 
+
+
+.list div .draw:hover+.list .hide .draw-img {
+  visibility: visible;
+}
+
+.list div .paint:hover~.paint-img img {
+  visibility: visible;
+} */
+
+/* .list div .mix:hover~.mix-img img {
+  visibility: visible;
+}
+
+.list div .weld:hover~.weld-img img {
+  visibility: visible;
+} */
+
+
+
 .socials a {
-  color: rgba(50, 50, 48, 0.644);
+  color: var(--text)
 }
 
 .about div {
@@ -261,7 +372,7 @@ summary {
   line-height: 2vh;
   font-family: 'Montserrat', sans-serif;
   word-spacing: 0.7vh;
-  color: grey;
+  color: var(--text)
 }
 
 /* .about span {
@@ -277,8 +388,8 @@ summary {
 .footer-res button {
   width: 20vw;
   border-radius: 5px;
-  background-color: rgba(50, 50, 48, 0.644);
-  color: beige;
+  background-color: var(--contrast);
+  color: var(--back);
 
 
 }
@@ -340,9 +451,7 @@ summary {
 .footer-socials i {
   font-size: 3vh;
   padding: 2vh;
-  color: rgba(50, 50, 48, 0.644);
-
-
+  color: var(--text)
 }
 
 .socials i {
@@ -373,7 +482,7 @@ button {
   border: none;
   cursor: pointer;
   width: 15vw;
-  background-color: rgba(97, 134, 189, 0.312);
+  background-color: var(--contrast);
 
 }
 
@@ -399,7 +508,7 @@ button {
 
 .nav a {
   text-decoration: none;
-  color: rgba(50, 50, 48, 0.644);
+  color: var(--text);
   font-size: 2vw;
   padding: 0 1.5vw 0 1.5vw;
   font-weight: 900;
@@ -439,11 +548,11 @@ button {
 }
 
 .arrow {
-  border: solid black;
+  border: solid var(--text);
   border-width: 0 2px 2px 0;
   width: 10px;
   height: 10px;
-  margin: 5px;
+  margin: 10px;
 
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
@@ -452,6 +561,9 @@ button {
 
 
 .hobby-container {
+  /* display: flex;
+  justify-content: center; */
+
   display: grid;
   grid-gap: 2vw;
   grid-template-columns: repeat(auto-fill, minmax(28vw, 1fr));
@@ -462,6 +574,8 @@ button {
 
 .hobby-flex {
   position: relative;
+  display: flex;
+
 }
 
 .hobby-etc {
@@ -485,15 +599,27 @@ button {
 
 
 
-.hobby-flex img {
+
+
+
+
+
+
+
+/* .hobby-flex img {
 
   width: 40vw;
   height: 30vw;
   object-fit: cover;
+} */
+.hobby-img img {
 
-
-
+  width: 35vw;
+  height: 28vw;
+  object-fit: cover;
 }
+
+
 
 .hobby-caption {
   box-sizing: border-box;
@@ -503,7 +629,7 @@ button {
   font-size: 1.5vw;
   text-align: left;
   vertical-align: middle;
-  padding-top: 30%;
+  padding: 30% 20px 0 20px;
   line-height: 2vh;
   background-color: beige;
   width: 40vw;
@@ -512,18 +638,19 @@ button {
   visibility: none;
   opacity: 0;
   transition: opacity 0.3s;
-  color: goldenrod;
+  color: var(--contrast);
 
 }
 
 .etc-caption {
+  justify-self: flex-start;
   box-sizing: border-box;
   position: absolute;
   top: 0;
   left: 0;
   font-size: 1.5vw;
   text-align: left;
-  padding-top: 10%;
+  padding: 10% 20px 0 20px;
   line-height: 2vh;
   background-color: beige;
   width: 41vw;
@@ -532,17 +659,17 @@ button {
   visibility: none;
   opacity: 0;
   transition: opacity 0.3s;
-  color: goldenrod;
+  color: var(--contrast);
 
 }
 
 
 
-.hobby-flex:hover .hobby-caption {
+/* .hobby-flex:hover .hobby-caption {
   visibility: visible;
   opacity: 1;
 
-}
+} */
 
 
 .hobby-etc:hover .etc-caption {
@@ -580,7 +707,7 @@ button {
 
 
 
-ul {
+/* ul {
   margin: 0;
   padding: 0;
   animation: scrollUp 2.0s .16s infinite forwards;
@@ -592,14 +719,14 @@ li {
   padding: 10px;
   list-style: none;
   animation: scrollUp 2.0s .16s infinite forwards;
-}
+} */
 
 :root {
   --item-count: 6;
   --item: 1 / --item-count
 }
 
-@keyframes fadeOut {
+/* @keyframes fadeOut {
   from {
     opacity: 1;
   }
@@ -607,7 +734,7 @@ li {
   to {
     opacity: 0;
   }
-}
+} */
 
 @keyframes scrollUp {
   from {
@@ -640,7 +767,16 @@ li {
 
 }
 
+.topic {
+  padding: 0;
+  margin: 1.5vw 0;
+  font-family: 'Oswald', sans-serif;
+  font-size: 5vh;
+  color: rgba(128, 128, 128, 0.313);
+  border-bottom: 2px dotted var(--contrast);
+  align-self: flex-start;
 
+}
 
 .arduino {
   width: 15px;
@@ -687,7 +823,7 @@ li {
 
   animation: slide 20s infinite;
   font-weight: bold;
-  color: goldenrod;
+  color: var(--contrast);
   text-align: center;
 
 
@@ -703,8 +839,8 @@ li {
   text-align: center;
   font-size: clamp(1.75rem, 5vw, 3rem);
   font-family: 'Montserrat', sans-serif;
-  margin-bottom: 25vh;
-  text-shadow: 5px 0 15px #878786d2;
+  margin: 2vh 0 20vh 0;
+  text-shadow: 2px 2px 12px #f5dcd0d2;
 }
 
 @keyframes slide {
@@ -875,6 +1011,7 @@ a {
 
 .tech i {
   font-size: 3vw;
+  color: var(--contrast)
 }
 
 
@@ -885,7 +1022,6 @@ a {
 
 .scroller {
   display: flex;
-
   justify-content: center;
   height: 3vw;
   line-height: 1.2em;
@@ -897,7 +1033,6 @@ a {
   margin-top: 3vh;
   margin-bottom: 2vh;
   padding: 0;
-
 }
 
 
@@ -922,19 +1057,29 @@ a {
 
   }
 
+  .socials i {
+    font-size: 3vh;
+    padding: 0 3vh;
+  }
+
   .about div {
     font-size: 2.2vh;
     line-height: 2.5vh;
   }
 
+  .nav a {
+    font-size: 1.75vh;
+    margin: 0 1vh;
+  }
+
   .about {
-    padding-top: 10vh;
+    padding-top: 5vh;
   }
 
 
   .stack-container {
 
-    padding: 12vh 0;
+    padding-bottom: 12vh;
 
 
 
@@ -1076,7 +1221,7 @@ a {
     border: 1px dashed grey;
     color: grey;
     border-radius: 10px;
-    padding: 45% 0 45% 0;
+    padding: 45% 10px 45% 10px;
     text-align: center;
 
     background-color: rgba(203, 163, 62, 0.4)
@@ -1090,7 +1235,7 @@ a {
     font-size: 5vw;
     text-align: left;
     vertical-align: middle;
-    padding-top: 30%;
+    padding: 30% 20px 0 20px;
     line-height: 2.5vh;
     background-color: beige;
     width: 90vw;
@@ -1112,7 +1257,7 @@ a {
     left: 0;
     font-size: 5vw;
     text-align: left;
-    padding-top: 10%;
+    padding: 10% 15px 0 15px;
     line-height: 2.5vh;
     background-color: beige;
     width: 90vw;
