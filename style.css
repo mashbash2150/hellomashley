@@ -1,10 +1,36 @@
-@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@500&family=Bai+Jamjuree:wght@300&family=Monoton&family=Montserrat:wght@200&family=Orbitron&family=Syncopate&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@500&family=Monoton&family=Montserrat:wght@200&family=Orbitron&family=Syncopate&display=swap');
+/* 
+ */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Oswald&display=swap');
+
+
+
+/* :root {
+  --back: beige;
+  --text: #52514f95;
+  --contrast: goldenrod;
+  --border: black;
+} */
+/* :root {
+  --back: #414754;
+  --contrast: #b44d61;
+  --text: #E5D7BE;
+  --border: #82807F;
+} */
+
+
+:root {
+  --back: #171515;
+  --text: #F9F6F0;
+  --contrast: #C4AE78;
+  --border: #82807F;
+  --item-count: 6;
+  --item: 1 / --item-count
+}
 
 
 .App {
   width: 95%;
-  font-family: 'Bai Jamjuree', sans-serif;
+  font-family: 'Quattrocento', serif;
 
 }
 
@@ -15,16 +41,15 @@ html {
 body {
   height: 97%;
   width: 97%;
-  margin: 1em;
-  background-color: beige;
+  margin: 0;
+  padding: 0;
+  background-color: var(--back);
   font-family: 'Montserrat', sans-serif;
-
+  color: var(--text);
   /* background-color: rgba(136, 155, 58, 0.235); */
 }
 
-footer {
-  text-align: center;
-}
+
 
 .header-flex {
   font-family: 'Montserrat', sans-serif;
@@ -41,10 +66,10 @@ footer {
 
 
 .header-first {
+
   font-size: 7vw;
   z-index: 1;
-  text-decoration: line-through;
-  text-decoration: rgba(218, 165, 32, 0.6) 2px dotted line-through;
+
 }
 
 .header-last {
@@ -52,23 +77,45 @@ footer {
   margin-bottom: 4vh;
   font-size: 3vw;
   z-index: 20;
-  text-decoration: rgba(218, 165, 32, 1) 2px dotted line-through;
+  text-decoration: var(--contrast) 2px dotted line-through;
 }
 
 .circle-four img {
   object-fit: cover;
   width: 30vh;
   height: 30vh;
-  border: 2px dashed rgba(19, 19, 18, 0.258);
+  border: 2px dashed var(--contrast);
   border-radius: 50%;
-  opacity: 0.5;
+  opacity: 0.85;
   z-index: 0;
-  margin-top: -15vh;
+  /* margin-top: -15vh; */
+  margin-top: 2vh;
 
 }
 
+.hobby-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-content: space-between;
+  height: 30vw;
+
+}
+
+.hobby-header div {
+  margin: auto 4vw;
+  font-size: 4vw;
+
+}
+
+.hobby-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .section-header {
-  font-size: 3.5vw;
+  font-size: clamp(1rem, 3.5vw, 2rem);
   margin-bottom: 5vh;
   color: rgba(218, 165, 32, 1);
 }
@@ -85,16 +132,19 @@ footer {
 }
 
 .stack-container {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 27vw;
-  position: relative;
-  margin-top: 5vh;
-  margin-bottom: 5vh;
-  padding-bottom: 5vh;
+  display: flex;
+  grid-column-start: 2;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 5vh 0;
   flex-wrap: wrap;
 
+
+
 }
+
+
+
 
 .top {
   grid-column: 7/11;
@@ -104,25 +154,41 @@ footer {
 }
 
 .project {
-  grid-column: 1/4;
+  grid-column-start: 2;
   grid-row: 1;
-  text-align: center;
 
-  align-items: center;
-  font-size: 2.5vw;
+
+
+  font-size: 4vw;
   font-weight: 900;
 }
 
 .project-info {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  grid-column: 1/span 3;
-  grid-row: 1/1;
+  justify-content: space-evenly;
+  width: 32vw;
+  height: 28vw;
   text-align: center;
   font-size: 2.5vw;
-
+  overflow-wrap: break-word;
 }
+
+.leisure-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 32vw;
+  height: 28vw;
+  font-size: 2vw;
+
+  overflow-wrap: break-word;
+}
+
+
+
+
+
 
 details[open] summary span.exp {
   transform: rotate(180deg) translateX(-2vw);
@@ -147,43 +213,91 @@ summary {
 }
 
 .about {
+
+  overflow: visible;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: -2vh;
+  padding: 3vw;
+  border-top: 2px dotted rgba(0, 0, 0, 0.366);
 
-}
-
-.socials a {
-  color: black;
 }
 
 .about div {
-  font-size: 1.75vh;
-  width: 90vw;
-  margin-bottom: 2vh;
-  text-align: center;
-  line-height: 2vh;
-  font-family: 'Montserrat', sans-serif;
-  word-spacing: 0.7vh;
-  color: grey;
+  font-size: 2.2vh;
+  line-height: 2.5vw;
+  padding: 2vw;
 }
 
-/* .about span {
-  font-size: 1.5vh;
-  text-align: left;
-} */
+.underlay {
+  font-family: 'Oswald', sans-serif;
+  font-size: 10vw;
+  color: grey;
+  z-index: -1;
+  margin-top: 2vw;
+  margin-right: 3vw;
+  padding: 0 2vh 0 0;
+  writing-mode: vertical-lr;
+  opacity: 0.22;
+
+
+}
+
+.underlay-projects {
+  font-family: 'Oswald', sans-serif;
+  font-size: 10vw;
+  color: grey;
+  z-index: -1;
+  margin-top: 2vw;
+  margin-right: 3vw;
+  padding: 0 2vh 0 0;
+  writing-mode: vertical-lr;
+  opacity: 0.22;
+
+
+}
+
+
+
+
+
+
+
+
+
+.p4,
+.p3,
+.p2,
+.p1 {
+  border-top: 2px dotted rgba(50, 50, 48, 0.644);
+}
+
+
+
+.section-grid {
+  padding-top: 5vh;
+  margin: 10vh 0 0 -3vw;
+
+  display: grid;
+  grid-template-columns: 15vw 85vw;
+}
+
+
+
+
 
 .copy {
   margin: 4vh;
+  text-align: center;
 }
 
 .footer-res button {
   width: 20vw;
   border-radius: 5px;
-  background-color: black;
-  color: white;
+  background-color: var(--contrast);
+  color: var(--back);
+
 
 }
 
@@ -194,14 +308,17 @@ summary {
   margin-top: 0.5vw;
 }
 
-#work-anchor img {
+
+.proj-img img {
   object-fit: cover;
-  width: 25vw;
-  height: 25vw;
+  width: 40vw;
+  height: 28vw;
   ;
   transition: opacity 0.5s ease-in-out;
   transition: transform 0.3s ease-in-out;
-  border-radius: 10px;
+
+  opacity: 0.7;
+
 
 }
 
@@ -216,13 +333,7 @@ summary {
   padding: 0.5vw 0 0 1vw;
 }
 
-.proj-img img:hover {
-  z-index: 5;
-  opacity: 1;
-  transform: scale(1.4);
-  transform: translateY(-3vh);
 
-}
 
 .socials {
   display: flex;
@@ -247,14 +358,12 @@ summary {
 .footer-socials i {
   font-size: 3vh;
   padding: 2vh;
-  color: black;
-
-
+  color: var(--text)
 }
 
 .socials i {
 
-  font-size: 3vw;
+  font-size: 3.5vw;
   padding-left: 5vw;
 }
 
@@ -280,7 +389,7 @@ button {
   border: none;
   cursor: pointer;
   width: 15vw;
-  background-color: rgba(97, 134, 189, 0.312);
+  background-color: var(--contrast);
 
 }
 
@@ -306,8 +415,8 @@ button {
 
 .nav a {
   text-decoration: none;
-  color: black;
-  font-size: 1.5vw;
+  color: var(--text);
+  font-size: 2vw;
   padding: 0 1.5vw 0 1.5vw;
   font-weight: 900;
 }
@@ -316,112 +425,12 @@ button {
 
 
 
-/* .slider {
-
-  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
-  height: 5bpx;
-  margin: auto;
-  overflow: hidden;
-  position: relative;
-  width: 300px;
-  border-radius: 10px;
-
-} */
-
-/* .slider::before,
-::after {
-  content: "";
-  height: 100px;
-  position: absolute;
-  width: 200px;
-  z-index: 2;
-}
-
-::after {
-  right: 0;
-  top: 0;
-  transform: rotateZ(180deg);
-}
-
-::before {
-  left: 0;
-  top: 0;
-} */
-
-/* .slide-track {
-  animation: scroll 50s ease-in-out infinite;
-  display: flex;
-  width: calc(250px * 14);
-
-}
-
-.word {
-  font-size: 2vh;
-  color: black;
-} */
-
-
-/* .slide {
-  height: 50px;
-  width: 250px;
-  font-size: 4vh;
-  padding-top: 2vh;
-
-} */
-
-/* @keyframes scroll {
-  0% {
-    transform: translateY(0);
-  }
-
-  100% {
-    transform: translateY(calc(-250px * 7))
-  }
-} */
-
-
-
-.box {
-  height: 40px;
-  margin: auto;
-  overflow: hidden;
-  position: relative;
-
-}
-
-.box::before {
-  top: 0;
-  left: 0;
-  z-index: 1;
-  width: 100%;
-  content: '';
-  height: 10px;
-  position: absolute;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
-}
-
-.box::before::after {
-  left: 0;
-  bottom: 0;
-  z-index: 1;
-  width: 100%;
-  content: '';
-  height: 10px;
-  position: absolute;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
-}
-
 .hello {
   font-size: 2vh;
   text-align: center;
 
 }
 
-/* div span {
-  font-size: 3vh;
-  text-align: center;
-
-} */
 
 
 .dot-flex {
@@ -446,11 +455,11 @@ button {
 }
 
 .arrow {
-  border: solid black;
+  border: solid var(--text);
   border-width: 0 2px 2px 0;
   width: 10px;
   height: 10px;
-  margin: 5px;
+  margin: 10px;
 
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
@@ -459,15 +468,21 @@ button {
 
 
 .hobby-container {
+  /* display: flex;
+  justify-content: center; */
+
   display: grid;
   grid-gap: 2vw;
   grid-template-columns: repeat(auto-fill, minmax(28vw, 1fr));
   margin: 0 2vw 0 2vw;
-
+  padding-top: 2vw;
+  border-top: 2px dotted rgba(50, 50, 48, 0.644);
 }
 
 .hobby-flex {
   position: relative;
+  display: flex;
+
 }
 
 .hobby-etc {
@@ -475,28 +490,41 @@ button {
 }
 
 .etc {
-
-  width: 30vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40vw;
+  height: 30vw;
   border: 1px dashed grey;
   color: grey;
   border-radius: 10px;
-  padding: 45% 0 45% 0;
+
   text-align: center;
 
   background-color: rgba(203, 163, 62, 0.4)
 }
 
 
-
-.hobby-flex img {
-
-  width: 30vw;
-  height: 30vw;
-  object-fit: cover;
-  border-radius: 10px;
-
-
+.socials i {
+  color: var(--text)
 }
+
+
+.about {
+  text-align: center;
+}
+
+
+
+
+.hobby-img img {
+
+  width: 35vw;
+  height: 28vw;
+  object-fit: cover;
+}
+
+
 
 .hobby-caption {
   box-sizing: border-box;
@@ -506,46 +534,47 @@ button {
   font-size: 1.5vw;
   text-align: left;
   vertical-align: middle;
-  padding-top: 30%;
+  padding: 30% 20px 0 20px;
   line-height: 2vh;
   background-color: beige;
-  width: 30vw;
+  width: 40vw;
   height: 30vw;
   z-index: 0;
   visibility: none;
   opacity: 0;
   transition: opacity 0.3s;
-  color: goldenrod;
+  color: var(--contrast);
 
 }
 
 .etc-caption {
+  justify-self: flex-start;
   box-sizing: border-box;
   position: absolute;
   top: 0;
   left: 0;
   font-size: 1.5vw;
   text-align: left;
-  padding-top: 10%;
+  padding: 10% 20px 0 20px;
   line-height: 2vh;
   background-color: beige;
-  width: 30vw;
-  height: 30vw;
+  width: 41vw;
+  height: 31vw;
   z-index: 0;
   visibility: none;
   opacity: 0;
   transition: opacity 0.3s;
-  color: goldenrod;
+  color: var(--contrast);
 
 }
 
 
 
-.hobby-flex:hover .hobby-caption {
+/* .hobby-flex:hover .hobby-caption {
   visibility: visible;
   opacity: 1;
 
-}
+} */
 
 
 .hobby-etc:hover .etc-caption {
@@ -556,61 +585,11 @@ button {
 
 
 
-/* .hobby img {
-  height: 30vw;
-  width: 30vw;
-
-
-  object-fit: cover;
-
-} */
-
-*/
-/* .hobby img:hover {
-
-  width: 27vw;
-  height: 27vw;
-  object-fit: cover;
-  opacity: 0;
-} */
-
-/* .hobby:hover {
-  text-align: right;
-  font-size: 3vh;
-  background-color: rgba(80, 79, 79, 0.916);
-  color: aliceblue;
-} */
 
 
 
-ul {
-  margin: 0;
-  padding: 0;
-  animation: scrollUp 2.0s .16s infinite forwards;
-}
 
-li {
-  opacity: 1;
-  height: 25px;
-  padding: 10px;
-  list-style: none;
-  animation: scrollUp 2.0s .16s infinite forwards;
-}
 
-:root {
-  --item-count: 6;
-  --item: 1 / --item-count
-}
-
-@keyframes fadeOut {
-  from {
-    opacity: 1;
-  }
-
-  to {
-    opacity: 0;
-  }
-}
 
 @keyframes scrollUp {
   from {
@@ -643,7 +622,16 @@ li {
 
 }
 
+.topic {
+  padding: 0;
+  margin: 1.5vw 0;
+  font-family: 'Oswald', sans-serif;
+  font-size: 5vh;
+  color: rgba(128, 128, 128, 0.313);
+  border-bottom: 2px dotted var(--contrast);
+  align-self: flex-start;
 
+}
 
 .arduino {
   width: 15px;
@@ -676,25 +664,15 @@ li {
   background-color: black;
 }
 
-/* .motto {
-  margin-right: 2vw;
-  text-align: right;
 
-  color: rgba(218, 165, 32, 1);
-  width: 20vw;
-} */
 
 .scroller span {
   position: absolute;
   top: 0;
-
   animation: slide 20s infinite;
   font-weight: bold;
-  color: goldenrod;
+  color: var(--contrast);
   text-align: center;
-
-
-
 }
 
 
@@ -702,11 +680,12 @@ li {
 
 
 .dev {
+  letter-spacing: 0.3vw;
   text-align: center;
   font-size: clamp(1.75rem, 5vw, 3rem);
-
-  margin-bottom: 9vh;
-  text-shadow: 5px 0 15px #878786d2;
+  font-family: 'Montserrat', sans-serif;
+  margin: 2vh 0 20vh 0;
+  text-shadow: 2px 2px 12px #f5dcd0d2;
 }
 
 @keyframes slide {
@@ -749,23 +728,9 @@ li {
   90% {
     top: -10.8em;
   }
-
-
 }
 
 
-
-
-
-/* 
-.hobby {
-  display: flex;
-  flex-direction: column;
-
-  width: 25vh;
-  height: 25vh;
-
-} */
 
 
 .image-container img {
@@ -774,33 +739,21 @@ li {
 
   object-fit: cover;
   border-radius: 10px;
-
 }
 
 .slider {
   width: 52vw;
   height: 36vw;
-
   padding-left: 3vw;
-
-
-
   text-align: center;
   overflow: hidden;
 }
 
 
 .image-container {
-
   display: flex;
   flex-wrap: wrap;
   height: 25vw;
-  /* clear: both;
-  position: relative;
-  -webkit-transition: left 2s;
-  -moz-transition: left 2s;
-  -o-transition: left 2s;
-  transition: left 2s; */
 }
 
 .slide {
@@ -808,48 +761,11 @@ li {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: flex-start;
-  /* float: left; */
   margin: 0px;
   padding: 0px;
   position: relative;
 }
 
-/* .caption {
-  display: flex;
-  text-align: left;
-  padding-left: 2vw;
-  align-items: center;
-  width: 20vw;
-  padding-right: 2vw;
-} */
-
-/* #slide-1:target~.image-container {
-  left: 0px;
-}
-
-#slide-2:target~.image-container {
-  left: -54vw;
-}
-
-#slide-3:target~.image-container {
-  left: -109vw;
-}
-
-#slide-4:target~.image-container {
-  left: -163vw;
-}
-
-#slide-5:target~.image-container {
-  left: -217vw;
-}
-
-#slide-6:target~.image-container {
-  left: -271vw;
-}
-
-#slide-7:target~.image-container {
-  left: -325vw;
-} */
 
 .buttons {
   position: relative;
@@ -880,11 +796,9 @@ a {
 .tooltip {
   position: relative;
   display: inline-block;
-
-  /* If you want dots under the hoverable text */
 }
 
-/* Tooltip text */
+
 .tooltip .tooltiptext {
   visibility: hidden;
   width: 20vw;
@@ -893,72 +807,37 @@ a {
   text-align: center;
   padding: 5px 0;
   border-radius: 6px;
-
-  /* Position the tooltip text */
   position: absolute;
   z-index: 1;
   bottom: -3vh;
   left: 0vw;
-  /* margin-left: -60px; */
-
-  /* Fade in tooltip */
   opacity: 0;
   transition: opacity 0.3s;
 }
 
-/* Tooltip arrow */
-/* .tooltip .tooltiptext::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #555 transparent transparent transparent;
-} */
 
-/* Show the tooltip text when you mouse over the tooltip container */
 .tooltip:hover .tooltiptext {
   visibility: visible;
   opacity: 1;
 }
 
-.project-info {
 
-  display: flex;
-  flex-direction: column;
-  font-size: 3vw;
-}
 
-.project {
-  font-size: 5vw;
-}
+
 
 .tech i {
   font-size: 3vw;
+  color: var(--contrast)
 }
 
 
 
 
-.stack-container {
-  /* display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 27vw 27vw;
-  position: relative; */
-  margin: auto;
-  display: inline-block;
-  text-align: center;
-  width: 100vw;
 
-
-}
 
 
 .scroller {
   display: flex;
-
   justify-content: center;
   height: 3vw;
   line-height: 1.2em;
@@ -970,26 +849,65 @@ a {
   margin-top: 3vh;
   margin-bottom: 2vh;
   padding: 0;
-
 }
 
 
 
 .proj-links {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .proj-links button {
-  width: 30vw;
-  margin: 2vw;
+  width: 22vw;
+  font-size: 1.35vw;
+
 }
 
-.top {
-  margin: 0 2vw 0 2vw;
+@media screen and (min-width: 1150px) {
+  .proj-links button {
+    height: 5vh;
+    width: 22vw;
+    font-size: 1.75vh;
+  }
+
+  .socials i {
+    font-size: 3vh;
+    padding: 0 3vh;
+  }
+
+
+
+  .leisure-info {
+    font-size: 2.5vh;
+  }
+
+  .about div {
+    font-size: 3vh;
+    line-height: 4vh;
+
+  }
+
+  .nav a {
+    font-size: 1.75vh;
+    margin: 0 1vh;
+  }
+
+  .about {
+    padding-top: 5vh;
+  }
+
+
+  .stack-container {
+
+    padding-bottom: 12vh;
+
+
+
+
+  }
 }
-
-
 
 
 @media screen and (max-width: 600px) {
@@ -1020,12 +938,18 @@ a {
 
 
   .header-first {
-    font-size: 10vw;
+    font-size: 7vw;
+
+
   }
 
   .header-last {
     font-size: 6vw;
+
+
   }
+
+
 
   .circle-four img {
     object-fit: cover;
@@ -1035,21 +959,14 @@ a {
     border-radius: 50%;
     opacity: 0.5;
     z-index: 0;
-    margin-top: -15vh;
+
 
   }
 
   .stack-container {
-    /* display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 27vw 27vw;
-    position: relative; */
     margin: auto;
-
     text-align: center;
     width: 100vw;
-
-
   }
 
   .proj-img {
@@ -1061,9 +978,17 @@ a {
 
   .proj-img img {
     width: 70vw;
-    height: 70vw;
-    margin-bottom: 2vh;
+    height: 50vw;
+    object-fit: cover;
+    margin: 5vh 0;
   }
+
+  .topic {
+    font-size: 3vh;
+    text-align: left;
+  }
+
+
 
   .proj-links {
     display: flex;
@@ -1076,7 +1001,7 @@ a {
   }
 
   .project {
-    font-size: 3vh;
+    font-size: 2vh;
   }
 
 
@@ -1117,10 +1042,14 @@ a {
     border: 1px dashed grey;
     color: grey;
     border-radius: 10px;
-    padding: 45% 0 45% 0;
+    padding: 45% 10px 45% 10px;
     text-align: center;
 
     background-color: rgba(203, 163, 62, 0.4)
+  }
+
+  .leisure-info {
+    text-align: left;
   }
 
   .hobby-caption {
@@ -1131,7 +1060,7 @@ a {
     font-size: 5vw;
     text-align: left;
     vertical-align: middle;
-    padding-top: 30%;
+    padding: 30% 20px 0 20px;
     line-height: 2.5vh;
     background-color: beige;
     width: 90vw;
@@ -1145,13 +1074,15 @@ a {
   }
 
   .etc-caption {
+    display: flex;
+    align-items: center;
     box-sizing: border-box;
     position: absolute;
     top: 0;
     left: 0;
     font-size: 5vw;
     text-align: left;
-    padding-top: 10%;
+    padding: 10% 15px 0 15px;
     line-height: 2.5vh;
     background-color: beige;
     width: 90vw;
@@ -1162,6 +1093,14 @@ a {
     transition: opacity 0.3s;
     color: goldenrod;
 
+  }
+
+  .section-grid {
+    padding-top: 0vh;
+    margin: 0vh 0 0 -3vw;
+
+    display: grid;
+    grid-template-columns: 15vw 85vw;
   }
 
 
