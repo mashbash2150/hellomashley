@@ -823,7 +823,7 @@ a {
 
 .tooltip .tooltiptext {
   visibility: hidden;
-  width: 20vw;
+  width: 15vw;
   background-color: #555;
   color: #fff;
   text-align: center;
